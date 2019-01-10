@@ -7,6 +7,44 @@
 </ion-header>
 
 <ion-content padding>
-uhuuuu que bonitinho!
- 
+  <p>
+      <img src="https://images-submarino.b2w.io/produtos/01/00/item/19575/3/19575323_2SZ.jpg" alt="plannerImage" width=2000 height=400>
+  </p>
 </ion-content>
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+      <ion-title>
+        Planner Study
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+  <h2>Menu</h2> 
+    <ion-list>
+        <button ion-item (click)="openPage(atividadesPage)">
+          Atividades
+      </button>
+      <button ion-item (click)="openPage(horarioPage)">
+        Horário
+      </button>
+        <button ion-item (click)="openPage(plannerDiarioPage)">
+          Planner diário
+        </button>
+        <button ion-item (click)="openPage(plannerMensalPage)">
+          Planner mensal
+        </button>
+        <button ion-item (click)="openPage(plannerFinanceiroPage)">
+          Planner financeiro
+        </button>
+      <button ion-item (click)="openPage(redacaoPage)">
+        Controle de redação
+      </button>
+      </ion-list>
+  </ion-content>
+      
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
